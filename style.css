@@ -1,0 +1,211 @@
+* {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 32px;
+    transition: background-color 500ms;
+}
+
+body {
+    background-color: var(--fundo-calculadora);
+}
+
+:root {
+    --texto: #ffffff;
+    --fundo-calculadora: #3b4664;
+    --fundo-visor: #191f32;
+    --fundo-teclado: #252d44;
+    --fundo-numeros-operadores: #eae3db;
+    --shadow-numeros-operadores: #b4a69b;
+    --texto-numeros-operadores: #44474f;
+    --fundo-del-res: #637299;
+    --shadow-del-res: #404e75;
+    --fundo-igual: #d13f30;
+    --shadow-igual: #8f2316;
+    --fundo-switch: #252c46;
+    --hover-igual: #f96b5d;
+    --hover-del-res: #a2b3e1;
+    --hover-numeros-operadores: #ffffff;
+    --texto-igual: #ffffff;
+}
+
+.calculadora {
+    background-color: var(--fundo-calculadora);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;  
+}
+
+.visor {
+    background-color: var(--fundo-visor);
+    border-radius: 10px;
+    margin: 10px 20px 10px 20px;
+    flex-basis: 17%;
+}
+
+.visor p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+    font-size: 1.2rem;
+}
+
+.teclado {
+    background-color: var(--fundo-teclado);
+    border-radius: 10px;
+    margin: 10px 20px 20px 20px;
+    flex-basis: 68%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+p {
+    color: var(--texto);
+}
+
+.topo {
+    margin: 20px 20px 0px 20px;
+    flex-basis: 15%;
+    display: flex;
+    flex-direction: raw;
+    justify-content: space-between;
+}
+
+.topo .titulo p {
+    font-size: 0.75rem;
+}
+
+.linha1, .linha2, .linha3, .linha4, .linha5 {
+    height:  16%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.linha5 .tecla {
+    flex-basis: 48%;    
+}
+
+.tecla {
+    width: 22%;
+    border-radius: 6px;
+    border: none;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+}
+
+.numero, .operador, .ponto {
+    background-color: var(--fundo-numeros-operadores);
+    box-shadow: 0px 4px 0px 0px var(--shadow-numeros-operadores);
+    color: var(--texto-numeros-operadores);
+}
+
+.delRes {
+    background-color: var(--fundo-del-res);
+    box-shadow: 0px 4px 0px 0px var(--shadow-del-res);
+    color: white;
+    font-size: 20px;
+}
+
+.igual {
+    background-color: var(--fundo-igual);
+    box-shadow: 0px 4px 0px 0px var(--shadow-igual);
+    color: var(--texto-igual);
+}
+
+.temas {
+    display: flex;
+    align-items: center;
+}
+
+.texto-tema {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 0.4rem
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.numerosTemas {
+    font-size: 13px;
+    word-spacing: 13px;
+    margin-top: 10px;
+}
+
+.switch {
+    background-color: var(--fundo-switch);
+    height: 25px;
+    width: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.tema1 {
+    justify-content: flex-start;
+}
+
+.tema2 {
+    justify-content: center;
+}
+
+.tema3 {
+    justify-content: flex-end;
+}
+
+.botao {
+    background-color: var(--fundo-igual);
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    margin: 4px;
+    display: flex;
+}
+
+button:hover, .switch:hover {
+    cursor: pointer;
+}
+
+.select {
+    display: none;
+}
+
+.igual:hover {
+    background-color: var(--hover-igual);
+}
+
+.delRes:hover {
+    background-color: var(--hover-del-res);
+}
+
+.numero:hover, .operador:hover {
+    background-color: var(--hover-numeros-operadores);
+}
+
+.switch:hover .botao {
+    background-color: var(--hover-igual);
+    cursor: pointer;
+}
+
+@media (min-width: 375px) {
+    .calculadora {
+        height: 95%;
+        max-width: 500px;
+        max-height: 700px;
+        margin: auto auto;
+    }
+}
