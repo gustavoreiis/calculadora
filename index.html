@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Calculadora</title>
+</head>
+
+<body>
+  <div class="calculadora">
+    <div class="topo">
+      <p class="titulo">calc</p>
+      <div class="temas">
+        <p class="texto-tema">THEME</p>
+        <div class="container">
+          <p class="numerosTemas">1 2 3</p>
+          <div class="switch">
+            <div class="botao"></div>
+          </div>
+          <select class="select">
+            <option value="tema1"></option>
+            <option value="tema2"></option>
+            <option value="tema3"></option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="visor">
+      <p class="conteudo"></p>
+    </div>
+    <div class="teclado">
+      <div class="linha1">
+        <button class="tecla numero" onclick="inserir('7')">7</button>
+        <button class="tecla numero" onclick="inserir('8')">8</button>
+        <button class="tecla numero" onclick="inserir('9')">9</button>
+        <button class="delRes tecla" onclick="del()">DEL</button>
+      </div>
+
+      <div class="linha2">
+        <button class="tecla numero" onclick="inserir('4')">4</button>
+        <button class="tecla numero" onclick="inserir('5')">5</button>
+        <button class="tecla numero" onclick="inserir('6')">6</button>
+        <button class="tecla operador" onclick="inserir('+')">+</button>
+      </div>
+
+      <div class="linha3">
+        <button class="tecla numero" onclick="inserir('1')">1</button>
+        <button class="tecla numero" onclick="inserir('2')">2</button>
+        <button class="tecla numero" onclick="inserir('3')">3</button>
+        <button class="tecla operador" onclick="inserir('-')">-</button>
+      </div>
+
+      <div class="linha4">
+        <button class="tecla numero" onclick="inserir('.')">.</button>
+        <button class="tecla numero" onclick="inserir('0')">0</button>
+        <button class="tecla operador" onclick="inserir('/')">/</button>
+        <button class="tecla operador" onclick="inserir('x')">x</button>
+      </div>
+
+      <div class="linha5">
+        <button class="tecla delRes" onclick="reset()">RESET</button>
+        <button class="tecla igual" onclick="igual()">=</button>
+      </div>
+
+
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
